@@ -322,6 +322,11 @@ h4{
 	color: yellow;
 }
 
+#contenedor .productos .boxproducto .tachado{
+	color: whitesmoke;
+	text-decoration: line-through;
+}
+
 form{
 	padding: 20px;
 	line-height: 3.0;
@@ -389,7 +394,7 @@ form{
     color: white;
     text-transform: uppercase;
     background: #49a09d;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .boton:hover{
