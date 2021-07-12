@@ -1,0 +1,146 @@
+body{
+	background: $primero1;
+	color: $tercero;
+	font-family: $fuente;
+	font-weight: 400;
+
+}
+
+#header{
+	.navbar{
+		background: $primero1;
+		.navbar__img{
+			width: 100px;
+		}
+	}
+}
+
+#navbarNav{
+	.nav-link{
+		color: $tercero;
+	}
+}
+
+.navbar-expand-lg .navbar-collapse{
+	justify-content: center;
+}
+
+.btn-secondary{
+	@include boton;
+	&:hover{
+        box-shadow: 0px 0px 0px -6px black;
+        text-decoration: none;
+        color: $tercero;
+        background-color: yellowgreen;
+        border-color: $cuarto;
+    }
+}
+
+#carousel{
+	height: 720px;
+	@media all and (max-width: 675px){
+		width: 350px;
+		height: 215px;
+	}
+	.imacCar{
+		color: $segundo;
+		font-size: 1.5rem;
+		.imacCar__titulo{
+			
+		}
+		.imacCar__parrafo{
+			
+		}
+	}
+	.ipadPro2021Car{
+		color: $tercero;
+		font-size: 1.5rem;
+		.ipadPro2021Car__titulo{
+					}
+		.ipadPro2021Car__parrafo{
+			
+		}	
+	}
+}
+
+.btn-primary{
+	@include boton;
+	&:hover{
+        box-shadow: 0px 0px 0px -6px black;
+        text-decoration: none;
+        color: $tercero;
+        background-color: yellowgreen;
+        border-color: $cuarto;
+    }
+}
+
+#iphone12{
+	.iphone12__titulo{
+		font-size: 2.5rem;
+	
+		text-align: center;
+		margin: 30px 0px 40px 0px;
+	}	
+	.iphone12__video{
+		display: flex;
+		justify-content: center;
+		height: 80vh;
+		@media all and (max-width: 675px){
+			width: 350px;
+			height: 415px;
+			display: flex;
+			margin: auto; 
+		}
+	}
+}
+.row{
+	margin: 0px;
+}
+.card{
+	text-align: center;
+	.card-body{
+		line-height: 2;
+	}
+}
+
+#footer{
+	.botonera ul{
+		display: flex;
+	}
+	.navbar{
+		background-color: $primero;
+		height: 100px;
+	}
+	.navbar-nav{
+		margin: auto;
+	}
+}
+
+@each $k, $v in $weight {
+    .type-#{$k}{
+        font-family: $fuente;
+        font-weight: $v;
+    }
+}
+
+@each $k, $v in $sizes {
+    .text-#{$k}{
+        font-size: $v;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
