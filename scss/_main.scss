@@ -18,6 +18,10 @@ body{
 #navbarNav{
 	.nav-link{
 		color: $tercero;
+		font-size: $size-md;
+	}
+	.text-md{
+		font-size: $size-md;
 	}
 }
 
@@ -36,34 +40,56 @@ body{
     }
 }
 
-#carousel{
-	height: 720px;
-	@media all and (max-width: 675px){
-		width: 350px;
-		height: 215px;
-	}
-	.imacCar{
-		color: $segundo;
-		font-size: 1.5rem;
-		.imacCar__titulo{
-			
+h1, h2, h3{
+	text-align: center;
+	margin-top: $size-sm;
+	margin-bottom: $size-sm;
+}
+
+h3{
+	font-size: $size-md;
+}
+
+
+#productapple{
+	background-image: url("../media/iphonemorado.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	box-shadow: 7px 15px 37px whitesmoke;
+	.textoimg{
+		font-family: Helvetica;
+		font-weight: bold;
+		font-size: 50px;
+		color: black;
+		text-align: left;
+		margin: 60px 0px 0px 20px;
+		h3{
+			font-size: $size-lg;
 		}
-		.imacCar__parrafo{
-			
-		}
 	}
-	.ipadPro2021Car{
-		color: $tercero;
-		font-size: 1.5rem;
-		.ipadPro2021Car__titulo{
-					}
-		.ipadPro2021Car__parrafo{
-			
-		}	
+	p{
+		font-weight: bold;
+		font-size: 25px;
 	}
 }
 
+@media all and (max-width: 575px){
+	#productapple{
+		background-image: url("../media/iphonemorado.jpg");
+		background-repeat: no-repeat;
+		width: 350px;
+		height: 415px;
+		margin-bottom: 10px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
 .btn-primary{
+	margin-left: 80px;
 	@include boton;
 	&:hover{
         box-shadow: 0px 0px 0px -6px black;
@@ -73,26 +99,19 @@ body{
         border-color: $cuarto;
     }
 }
-
-#iphone12{
-	.iphone12__titulo{
-		font-size: 2.5rem;
 	
-		text-align: center;
-		margin: 30px 0px 40px 0px;
-	}	
-	.iphone12__video{
+.videoplayer{
+	display: flex;
+	justify-content: center;
+	height: 80vh;
+	@media all and (max-width: 675px){
+		width: 350px;
+		height: 415px;
 		display: flex;
-		justify-content: center;
-		height: 80vh;
-		@media all and (max-width: 675px){
-			width: 350px;
-			height: 415px;
-			display: flex;
-			margin: auto; 
-		}
-	}
+		margin: auto; 
+		}	
 }
+
 .row{
 	margin: 0px;
 }
@@ -105,30 +124,19 @@ body{
 
 #footer{
 	.botonera ul{
+		list-style: none;
 		display: flex;
-	}
-	.navbar{
-		background-color: $primero;
-		height: 100px;
-	}
-	.navbar-nav{
-		margin: auto;
-	}
+		justify-content: center;
+		font-size: $size-md;
+		li{
+			padding: 10px;
+			a{
+				color: $tercero;
+			}
+		}
+  	}
 }
 
-@each $k, $v in $weight {
-    .type-#{$k}{
-        font-family: $fuente;
-        font-weight: $v;
-    }
-}
-
-@each $k, $v in $sizes {
-    .text-#{$k}{
-        font-size: $v;
-
-    }
-}
 
 
 
